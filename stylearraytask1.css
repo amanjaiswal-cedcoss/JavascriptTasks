@@ -1,0 +1,17 @@
+ul{
+    list-style: none;
+}
+ul:hover{
+     cursor: grab;
+  }
+
+table{
+    /* margin-top: 2%; */
+    width: 50%;
+    display: none;
+}
+td,th{
+    width:25%;
+    text-align: center;
+
+}
