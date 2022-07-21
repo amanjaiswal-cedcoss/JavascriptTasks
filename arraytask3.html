@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylearraytask3.css">
+    <script src="jsarraytask3.js"></script>
+    <title>Array Optional Task 3</title>
+</head>
+<body>
+    <div id="form">
+        <div class="divs" ><label>NAME*:</label><input type="text" id="name"></div>
+        <div class="divs" ><label>EMAIL*:</label><input type="email" id="email"></div>
+        <div class="divs" ><label>PHONE*:</label><input type="number" id="phone"></div>
+        <div class="divs"><label>ADDRESS*:</label><input type="text" id="address"></div>
+        <div class="divs"><label>CITY*:</label><input type="text" id="city"></div>
+        <div class="divs" ><label>POSTCODE*:</label><input type="number" id="postcode"></div>
+        <div class="divs"><label>PROVINCE*:</label><input type="text" id="province"></div>
+        <div class="divs"><label>PRODUCT 1:</label><input type="number" id="quantity1"></div>
+        <div class="divs"><label>PRODUCT 2:</label><input type="number" id="quantity2"></div>
+        <div class="divs"><label>PRODUCT 3:</label><input type="number" id="quantity3"></div>
+        <div class="divs"><label>DELIVERY TIME:</label><input type="text" id="deliverydays"></div>
+        <div id="btn" ><label><button onclick="calculate()">PLACE ORDER</button></div>
+    </div>
+        <p id="nameoutput"></p>
+        <p id="emailoutput"></p>
+        <p id="phoneoutput"></p>
+        <p id="postcodeoutput"></p>
+    <h1 id="head">My Shop's Invoice</h1>
+    <div id="output">
+        <div class="divso">NAME : <p id="dispname"></p></div>
+        <div class="divso">EMAIL : <p id="dispemail"></p></div>
+        <div class="divso">PHONE : <p id="dispphone"></p></div>
+        <div class="divso">DELIVERY ADDRESS : <p id="dispaddress"></p></div>
+        <div class="divso"><p id="product1q"></p>PRODUCT 1 @ $10.00 : <p id="dispproduct1"></p></div>
+        <div class="divso"><p id="product2q"></p>PRODUCT 2 @ $20.00 : <p id="dispproduct2"></p></div>
+        <div class="divso"><p id="product3q"></p>PRODUCT 3 @ $30.00 : <p id="dispproduct3"></p></div>
+        <div class="divso">SHIPPING CHARGES : $20</div>
+        <div class="divso">SUB TOTAL : <p id="subtotal"></p></div>
+        <div class="divso">TAXES @ 13% : <p id="taxes"></p></div>
+        <div class="divso">TOTAL : <p id="total"></p></div>
+    </div>
+</body>
+</html>

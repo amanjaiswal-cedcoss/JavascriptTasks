@@ -1,0 +1,55 @@
+#form{
+    display: flex;
+    flex-flow: column;
+    border: 2px solid black;
+    width: 45%;
+    height: 500px;
+    margin: auto;
+    padding: 3%;
+}
+.divs{
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0%;
+}
+
+.divso{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0%;
+}
+.divso p{
+    margin:0px;
+}
+#form div input{
+    width: 50%;
+    height: 100%;
+
+}
+#btn{
+    display: flex;
+    justify-content: center;
+}
+#btn button{
+    background-color: white;
+    border: 2px solid black;
+    padding: 10% 14%;
+    width: 130%;
+    margin-top: 15%;
+}
+#head{
+    display: none;
+    text-align: center;
+}
+#output{
+    display: none;
+    flex-flow: column;
+    width: 45%;
+    height: 500px;
+    margin: auto;
+    padding: 3%;
+}
