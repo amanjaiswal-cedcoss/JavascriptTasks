@@ -1,121 +1,97 @@
-var U = 0,
-  L = 0,
-  space = 0,
-  cal = 0,
-  special = 0,
-  specialoccur;
-  
+
+  let flagname=flagemail=flagphone=flagpostcode=false;
+  var regexName =/^[A-Z][a-z]{2,} [A-Z][a-z]{2,}/;
+  var regexEmail=/^[A-Za-z][A-Za-z0-9_.]{2,}@[a-z]{2,}.[a-z]{2,}$/;
+  var regexPhone=/^\d{10}$/;
+  var regexPostcode=/^\d{6}$/;
+
+function nameCheck(){
+  document.getElementById("nameoutput").innerHTML="";
+  var Name = document.getElementById("name").value;
+  console.log(Name.length)
+  if(Name.length>25){
+    document.getElementById("nameoutput").innerHTML="Name should contain upto 25 characters";
+  }
+ if(regexName.test(Name)==false){
+   document.getElementById("nameoutput").innerHTML="Name should contain first name and last name and upto 25 characters";
+  }
+  else{
+    flagname=true;
+  }
+  console.log("flag="+flagname)
+  }
+
+//   // email validation
+  function emailCheck(){
+    document.getElementById("emailoutput").innerHTML="";
+    var email = document.getElementById("email").value;
+ 
+  if (email.length > 30) {
+    document.getElementById("emailoutput").innerHTML =
+      "Email cannot contain more than 30 characters";
+  }
+  else if(regexEmail.test(email)==false){
+    document.getElementById("emailoutput").innerHTML =
+      "Email cannot contain more than 30 characters";
+  }
+  else{
+    flagemail=true;
+  }
+  console.log("flag="+flagemail)
+//   
+  }
+
+ 
+function phoneCheck(){
+  document.getElementById("phoneoutput").innerHTML="";
+  var phone = document.getElementById("phone").value;
+  //phone number validation
+ console.log(phone.length)
+  if (regexPhone.test(phone)==false) {
+    document.getElementById("phoneoutput").innerHTML =
+      "Phone number should contain 10 digits";
+  }
+  else{
+    flagphone=true;
+  }
+  console.log("flag="+flagphone)
+}
+
+function postcodeCheck(){
+  document.getElementById("postcodeoutput").innerHTML="";
+  //postcode validation
+  var postcode=document.getElementById("postcode").value;
+
+  if (regexPostcode.test(postcode)==false) {
+    document.getElementById("postcodeoutput").innerHTML =
+      "Postcode should contain 6 digits";
+  }
+  else{
+    flagpostcode=true;
+  }
+  console.log("flag="+flagpostcode)
+
+}
+
+ // storing inputs in array
+
  
 function calculate() {
+  console.log(flagname)
+  if(flagname==true&&flagemail==true&&flagphone==true&&flagpostcode==true){
+  
 
   document.getElementById("output").style.display="flex";
   document.getElementById("output").style.border="2px solid black";
   document.getElementById("head").style.display="block";
 
-  var name = document.getElementById("name").value;
-
-  
-  var postcode=document.getElementById("postcode").value;
-
-  console.log(name.length)
-  if (name.length > 25)
-      document.getElementById("nameoutput").innerHTML =
-        "Name can contain maximum 25 characters";
-    if (name.length < 3)
-        document.getElementById("nameoutput").innerHTML =
-          "Name should contain first name and last name both";
-
-    // name validation
-
-  for(i = 0; i < name.length; i++) {
-      var traverse = name.charCodeAt(i);
-      console.log("traverse" + traverse);
-      if (traverse == 32) {
-        space++;
-      } else if (traverse >= 65 && traverse < 90) {
-        U++;
-      } else if (traverse >= 97 && traverse <= 122) {
-        L++;
-      }
-    }
-    var cal = name.length - (U + space);
-    console.log(cal);
-
-    if (U > 2 || space > 1 || L < cal) {
-      document.getElementById("nameoutput").innerHTML =
-        "Name can contain lowercase letters, uppercase letters and one space only";
-    }
-    if(U<2 || space<1){
-      document.getElementById("nameoutput").innerHTML =
-      "Name should contain 2 uppercase letters, each for first and last name";
-    }
-
-  // email validation
-
+  var Name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
-  if (email.length > 30) {
-    document.getElementById("emailoutput").innerHTML =
-      "Email cannot contain more than 30 characters";
-  }
-
-  if (
-    email.charCodeAt(0) < 48 ||
-    (email.charCodeAt(0) > 57 && email.charCodeAt(0) < 65) ||
-    (email.charCodeAt(0) > 90 && email.charCodeAt(0) < 97) ||
-    email.charCodeAt(0) > 122
-  ) {
-    document.getElementById("emailoutput").innerHTML =
-      "Email's first character cannot be a special character";
-  }
-  for (i = 0; i < email.length; i++) {
-    var traverse2 = email.charCodeAt(i);
-    console.log("traverse 2=" + traverse2);
-    if (traverse2 == 64) {
-      special++;
-      specialoccur = i;
-    }
-  }
- console.log("first loop finish")
- console.log("@ =", special)
- console.log("@ position", specialoccur)
-  if (special > 1) {
-    document.getElementById("emailoutput").innerHTML =
-      "Email can only contain one @ sign";
-  }
-    for (i = specialoccur+1; i < email.length; i++) {
-      if (
-        (email.charCodeAt(i) < 65 ||( email.charCodeAt(i) > 90 &&
-        email.charCodeAt(i) < 97 ) || email.charCodeAt(i) > 122)
-      ) {
-        document.getElementById("emailoutput").innerHTML =
-          "Email should contain only letters after @ sign";
-      }
-    }
-  
-  
-
- 
-
-  //phone number validation
   var phone = document.getElementById("phone").value;
-  if (phone.length != 10) {
-    document.getElementById("phoneoutput").innerHTML =
-      "Phone number should contain 10 digits";
-  }
-
-  //postcode validation
-  var postcode = document.getElementById("phone").value;
-  if (postcode.length != 6) {
-    document.getElementById("postcodeoutput").innerHTML =
-      "Postcode should contain 6 digits";
-  }
-  
- // storing inputs in array
-
 
  var address =document.getElementById("address").value;
  var city=document.getElementById("city").value;
- var postcode      =document.getElementById("postcode").value;
+ var postcode=document.getElementById("postcode").value;
  var province=document.getElementById("province").value;
  var quantity1=document.getElementById("quantity1").value;
  var price1=quantity1*10;
@@ -128,7 +104,7 @@ function calculate() {
  var taxes=subtotal*0.13;
  var total=subtotal+taxes;
  const details=[
-    {name:name,email:email,phone:phone,address:address,quantity1:quantity1,price1:price1,quantity2:quantity2,price2:price2,quantity3:quantity3,price3:price3,subtotal:subtotal,taxes:taxes,total:total}
+    {name:Name,email:email,phone:phone,address:address,postcode:postcode,quantity1:quantity1,price1:price1,quantity2:quantity2,price2:price2,quantity3:quantity3,price3:price3,subtotal:subtotal,taxes:taxes,total:total}
  ];
  console.log(details)
 
@@ -145,4 +121,4 @@ document.getElementById("dispname").innerHTML=details[0].name;
  document.getElementById("subtotal").innerHTML=details[0].subtotal;
  document.getElementById("taxes").innerHTML=details[0].taxes;
  document.getElementById("total").innerHTML=details[0].total;
-}
+  }}

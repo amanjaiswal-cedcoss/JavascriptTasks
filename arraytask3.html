@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylearraytask3.css">
-    <script src="jsarraytask3.js"></script>
+    
     <title>Array Optional Task 3</title>
 </head>
 <body>
-    <div id="form">
-        <div class="divs" ><label>NAME*:</label><input type="text" id="name"></div>
-        <div class="divs" ><label>EMAIL*:</label><input type="email" id="email"></div>
-        <div class="divs" ><label>PHONE*:</label><input type="number" id="phone"></div>
-        <div class="divs"><label>ADDRESS*:</label><input type="text" id="address"></div>
+    <div id="form1">
+        <div class="divs" ><label>NAME*:</label><input type="text" id="name" onblur="nameCheck()"></div><div id="para"><p id="nameoutput"></p></div>
+        <div class="divs" ><label>EMAIL*:</label><input type="email" id="email" onblur="emailCheck()"></div><div id="para"><p id="emailoutput"></p></div>
+        <div class="divs" ><label>PHONE*:</label><input type="number" id="phone" onblur="phoneCheck()"></div><div id="para"><p id="phoneoutput"></p></div>
+        <div class="divs"><label>ADDRESS*:</label><input type="text" id="address" ></div>
         <div class="divs"><label>CITY*:</label><input type="text" id="city"></div>
-        <div class="divs" ><label>POSTCODE*:</label><input type="number" id="postcode"></div>
+        <div class="divs" ><label>POSTCODE*:</label><input type="number" id="postcode" onblur="postcodeCheck(this)"></div><div id="para"><p id="postcodeoutput"></p></div>
         <div class="divs"><label>PROVINCE*:</label><input type="text" id="province"></div>
         <div class="divs"><label>PRODUCT 1:</label><input type="number" id="quantity1"></div>
         <div class="divs"><label>PRODUCT 2:</label><input type="number" id="quantity2"></div>
@@ -23,11 +23,7 @@
         <div class="divs"><label>DELIVERY TIME:</label><input type="text" id="deliverydays"></div>
         <div id="btn" ><label><button onclick="calculate()">PLACE ORDER</button></div>
     </div>
-        <p id="nameoutput"></p>
-        <p id="emailoutput"></p>
-        <p id="phoneoutput"></p>
-        <p id="postcodeoutput"></p>
-    <h1 id="head">My Shop's Invoice</h1>
+     <h1 id="head">My Shop's Invoice</h1>
     <div id="output">
         <div class="divso">NAME : <p id="dispname"></p></div>
         <div class="divso">EMAIL : <p id="dispemail"></p></div>
@@ -41,5 +37,6 @@
         <div class="divso">TAXES @ 13% : <p id="taxes"></p></div>
         <div class="divso">TOTAL : <p id="total"></p></div>
     </div>
+    <script src="jsarraytask3.js"></script>
 </body>
 </html>
