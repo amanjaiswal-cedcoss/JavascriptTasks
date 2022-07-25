@@ -1,6 +1,5 @@
 const initial = ["Option 1", "Option 2", "Option 3", "Option 4"];
 var final = [];
-var final2 = [];
 var item = document.getElementById("list1");
 var item2=document.getElementById("list2");
 for (i = 0; i < initial.length; i++) {
