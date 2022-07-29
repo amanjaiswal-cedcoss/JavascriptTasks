@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleOptionalTask2.css" />
+    <script src="jsOptionalTask2.js"></script>
+    <title>Optional Task 2</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="image"><img src="brand.png" alt="" />
+      </div>
+      <div id="info">
+        <h2>Get Started</h2>
+        <p>Already have an account?</p>
+        <p id="login">Log In</p>
+       <div id="buttons">
+      <button id="google">sign up</button>
+       <button id="facebook">sign up</button></div>
+        <h3 id="or">Or</h3>
+        <label>Name</label>
+        <div class="data">
+          <img src="id.png" alt="">
+        <input type="text" id="name" maxlength="25" onblur="checkName()"> </div>
+        <label>Email</label>
+        <div class="data">
+          <img src="mail.png" alt="">
+        <input type="email" id="email" maxlength="30" onblur="checkEmail()"></div>
+        <label>Password</label>
+        <div class="data">
+          <img src="lock.png" alt="" width="28px">
+        <input type="password" id="password" maxlength="14" onblur="checkPassword()"></div>
+        <button id="submit" onclick="check();">Submit</button>
+        <p class="output" id="nameOutput" ></p>  
+        <p class="output" id="emailOutput" ></p>  
+        <p class="output" id="passwordOutput" ></p>  
+      </div>
+    </div>
+  </body>
+</html>
+<!-- comment -->

@@ -1,0 +1,93 @@
+#container{
+    display: flex;
+   margin: auto;
+    border: 2px solid rgb(243, 26, 63);
+    border-radius: 6px;
+    width: 70%;
+    height: 474px;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+#image{
+    width:50%
+}
+#info{
+    width: 35%;
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    padding: 0% 8% 0% 8%;
+
+}
+#info h2{
+    margin: 0px;
+}
+#info p{
+    font-size: smaller;
+    margin: 0px;
+}
+#login{
+    color: rgb(194, 29, 57);
+}
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding: 3% 0% 9% 0%;
+    
+}
+#or{
+margin: auto;
+}
+#buttons button{
+    width: 45%;
+}
+#google{
+border: 1px solid rgb(182, 174, 174);
+background-color: white;
+border-radius: 5px;
+width: 40%
+}
+#facebook{
+background-color: rgb(40, 40, 110);
+color: white;
+border-radius: 5px;
+border: none;
+width: 40%;
+}
+#info input{
+    height: 95%;
+    border: 0px;
+    width: 80%;
+    font-size: larger;
+}
+#info input:focus{
+    outline: 0px;
+    background-color: white;
+}
+#submit{
+    margin-top: 8%;
+    height: 30px;
+    background-color: rgb(224, 80, 104);
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.data{
+    
+    display: flex;
+    align-items: center;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid rgb(156, 152, 152);
+}
+.data img{
+    height: 90%;
+    width: 25px;
+}
+.output{
+    color: red;
+}
+/* comment */

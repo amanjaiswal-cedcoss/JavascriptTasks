@@ -17,7 +17,7 @@ function checkName() {
 
   if (regexName.test(name) == false) {
     document.getElementById("nameOutput").innerHTML =
-      "Name should contain first name and last name and upto 25 characters";
+      "Name should contain first name  and last name and upto 25 characters ";
   }
   else{
     flagName=true;
@@ -59,3 +59,4 @@ function checkPassword() {
   }
 }
 }
+// comment
