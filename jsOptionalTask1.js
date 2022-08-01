@@ -42,3 +42,4 @@ function winner(){
     if(count==5)
     document.getElementById("guessExceed").innerHTML="CONGRATULATIONS! You have won the game.";
 }
+// comment
