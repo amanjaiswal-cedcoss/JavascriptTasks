@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleTictactoe.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Tic Tac Toe</h1>
+        <p>Tap on any box to play!</p>
+        <div id="first"> <input type="text" id="1" maxlength="1" onclick="check(this)"><input type="text" id="2" maxlength="1" onclick="check(this)"><input type="text" id="3" maxlength="1" onclick="check(this)"></div>
+        <div id="second"><input type="text" id="4" maxlength="1" onclick="check(this)"><input type="text" id="5" maxlength="1" onclick="check(this)"><input type="text" id="6" maxlength="1" onclick="check(this)"></div>
+        <div id="third"> <input type="text" id="7" maxlength="1" onclick="check(this)"><input type="text" id="8" maxlength="1" onclick="check(this)"><input type="text" id="9" maxlength="1" onclick="check(this)"></div>
+        <button id="btnReset" onclick="reset()">RESET</button>   
+        <p id="result" ></p>
+    </div>
+  
+    <script src="jsTictactoe.js"></script>
+</body>
+</html>
