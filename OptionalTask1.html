@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleOptionalTask1.css" />
+    <title>Guess The Word</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="headingContainer"><img src="guesstheword.png" alt=""></div>
+      <p id="guessResult"></p>
+        <div id="paras">
+          <p id="0"><strong>.</strong></p>
+          <p id="1"><strong>.</strong></p>
+          <p id="2"><strong>.</strong></p>
+          <p id="3"><strong>.</strong></p>
+          <p id="4"><strong>.</strong></p>
+        </div>
+      
+      <div id="lower">
+        <p id="guessRemainingPara">You have 6 guesses remaining.</p>
+        <p id="guessAttemptsPara"></p>
+        <p id="typeOneLetter">Type one letter:</p>
+        <input type="text" id="inputGuess" maxlength="1"/>
+        <button onclick="checkGuess()" id="btn">Guess!</button>
+        <p id="guessExceed"></p>
+      </div>
+    </div>
+    <script src="jsOptionalTask1.js"></script>
+  </body>
+</html>
